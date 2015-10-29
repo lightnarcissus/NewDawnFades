@@ -30,9 +30,9 @@ public class JingleObject : MonoBehaviour {
 				//Get the next vertex
 				Vector3 v3Vertex = v3BaseVertices [i];
 				//Make a change to each of the coordinates of this vertex
-				v3Vertex.x += fScaleX * Random.Range (0, 5);
-				v3Vertex.y += fScaleY * Random.Range (0, 5);
-				v3Vertex.z += fScaleZ * Random.Range (0, 5);
+				v3Vertex.x += fScaleX * ReadText.num * Random.Range(0,5);
+				v3Vertex.y += fScaleY * ReadText.num * Random.Range(0,5);
+				v3Vertex.z += fScaleZ * ReadText.num * Random.Range(0,5);
 				//Add the new vertex to our new array
 				v3Vertices [i] = v3Vertex;
 			}

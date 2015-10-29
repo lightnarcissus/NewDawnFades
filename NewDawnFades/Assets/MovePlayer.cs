@@ -5,6 +5,7 @@ public class MovePlayer : MonoBehaviour {
 
 	private Animator playerAnim;
 	public GameObject forest;
+	public GameObject movequad;
 	// Use this for initialization
 	void Start () {
 	
