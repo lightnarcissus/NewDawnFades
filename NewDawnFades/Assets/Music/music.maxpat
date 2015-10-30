@@ -9,7 +9,7 @@
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 59.0, 104.0, 640.0, 480.0 ],
+		"rect" : [ 1142.0, 138.0, 640.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -43,9 +43,9 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 450.0, 317.0, 148.0, 22.0 ],
+					"patching_rect" : [ 451.0, 317.0, 155.0, 22.0 ],
 					"style" : "",
-					"text" : "clear, 0, cr, write music.txt"
+					"text" : "clear, $1, cr, write music.txt"
 				}
 
 			}

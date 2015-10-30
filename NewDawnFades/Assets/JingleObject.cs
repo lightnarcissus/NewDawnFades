@@ -17,8 +17,9 @@ public class JingleObject : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if(Random.value <0.01)
+		{
 		//The new vertices
-		if (Random.value < 0.05) {
 		Vector3[] v3Vertices = new Vector3[v3BaseVertices.Length];
 		//Random values to move the axis by and create the jingle
 		float fScaleX = Random.value/20 ;
@@ -30,9 +31,9 @@ public class JingleObject : MonoBehaviour {
 				//Get the next vertex
 				Vector3 v3Vertex = v3BaseVertices [i];
 				//Make a change to each of the coordinates of this vertex
-				v3Vertex.x += fScaleX * ReadText.num * Random.Range(0,5);
-				v3Vertex.y += fScaleY * ReadText.num * Random.Range(0,5);
-				v3Vertex.z += fScaleZ * ReadText.num * Random.Range(0,5);
+				v3Vertex.x += ReadText.num * 3f* Random.value;
+				v3Vertex.y += ReadText.freqNum * 3f* Random.value;
+				v3Vertex.z += ReadText.num * 3f* Random.value;
 				//Add the new vertex to our new array
 				v3Vertices [i] = v3Vertex;
 			}
@@ -46,6 +47,6 @@ public class JingleObject : MonoBehaviour {
 		//that the triangles from the vertex relationships
 		//are recalculated correctly
 		meshObjectsMesh.RecalculateBounds();
-		}
 	}
+}
 }
