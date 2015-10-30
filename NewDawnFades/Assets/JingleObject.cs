@@ -6,6 +6,7 @@ public class JingleObject : MonoBehaviour {
 	private Vector3[] v3BaseVertices;
 	//The objects mesh
 	private Mesh meshObjectsMesh;
+	private float randLimit=0f;
 	
 	//Initialise class
 	void Start () {
@@ -13,18 +14,19 @@ public class JingleObject : MonoBehaviour {
 		meshObjectsMesh = (Mesh)(gameObject.GetComponent<MeshFilter>().mesh);
 		//Set the original vertices
 		v3BaseVertices = meshObjectsMesh.vertices;
+		randLimit = Random.Range (0.3f, 0.35f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if(Random.value <0.01)
+		if(ReadText.num* ReadText.freqNum >randLimit )
 		{
 		//The new vertices
 		Vector3[] v3Vertices = new Vector3[v3BaseVertices.Length];
 		//Random values to move the axis by and create the jingle
-		float fScaleX = Random.value/20 ;
-		float fScaleY = Random.value/20 * 5 ;
-		float fScaleZ = Random.value/20 ;
+//		float fScaleX = Random.value/20 ;
+//		float fScaleY = Random.value/20 * 5 ;
+//		float fScaleZ = Random.value/20 ;
 		//loop through each vertex
 
 			for (var i=0; i<v3Vertices.Length; i++) {

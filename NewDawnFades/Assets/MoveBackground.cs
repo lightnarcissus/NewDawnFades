@@ -11,9 +11,12 @@ public class MoveBackground : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-		if(Input.GetKey (KeyCode.D)|| Input.GetKey(KeyCode.RightArrow))
-		{
-		gameObject.GetComponent<Renderer>().material.mainTextureOffset+=new Vector2(0.001f,0f);
+if (gameObject.name == "darkRoad") {
+			if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+				gameObject.GetComponent<Renderer> ().material.mainTextureOffset += new Vector2 (0.001f, 0f);
+			}
+		}	 else {
+			gameObject.GetComponent<Renderer> ().material.mainTextureOffset += new Vector2 (0.001f, 0f);
 		}
 	
 	}

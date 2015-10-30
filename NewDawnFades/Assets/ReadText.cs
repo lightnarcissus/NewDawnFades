@@ -10,8 +10,14 @@ public class ReadText : MonoBehaviour {
 	public string freqString;
 	public static float num;
 	public static float freqNum;
+	public GameObject renderQuad;
+	public static float timer=0f;
+	public GameObject text;
+	public static bool close=false;
+	public GameObject dirLight;
 	// Use this for initialization
 	void Start () {
+		renderQuad.SetActive (false);
 		//str = sr.ReadLine ();
 		//str = sr.();
 		//sr.Close();    
@@ -20,6 +26,20 @@ public class ReadText : MonoBehaviour {
 	// Update is called once per frame
 	void Update()
 	{
+		timer += Time.deltaTime;
+		if (timer > 10f && !close) {
+			renderQuad.SetActive(true);
+			text.SetActive (false);
+		}
+		if (timer > 280f) {
+			close=true;
+			dirLight.GetComponent<Light>().color=Color.white;
+
+			dirLight.GetComponent<Light>().intensity=1f;
+		}
+		if (timer > 290f) {
+			Application.Quit();
+		}
 		StreamReader sr = new StreamReader("/Users/Ansh/Documents/Github/NewDawnFades/NewDawnFades/Assets/Music/music.txt");
 		StreamReader fq = new StreamReader("/Users/Ansh/Documents/Github/NewDawnFades/NewDawnFades/Assets/Music/freq.txt");
 		str = sr.ReadLine();
