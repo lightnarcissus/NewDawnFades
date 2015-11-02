@@ -5,7 +5,7 @@ using System.IO;
 
 
 public class ReadText : MonoBehaviour {
-	StreamReader sr = new StreamReader("/Users/Ansh/Documents/Github/NewDawnFades/NewDawnFades/Assets/Music/music.txt");
+	StreamReader sr = new StreamReader("Assets/Music/music.txt");
 	public static string str;
 	public string freqString;
 	public static float num;
@@ -15,6 +15,8 @@ public class ReadText : MonoBehaviour {
 	public GameObject text;
 	public static bool close=false;
 	public GameObject dirLight;
+    private string pathName = "Assets/Music/music.txt";
+    private string freqPathName = "Assets/Music/freq.txt";
 	// Use this for initialization
 	void Start () {
 		renderQuad.SetActive (false);
@@ -40,8 +42,8 @@ public class ReadText : MonoBehaviour {
 		if (timer > 290f) {
 			Application.Quit();
 		}
-		StreamReader sr = new StreamReader("/Users/Ansh/Documents/Github/NewDawnFades/NewDawnFades/Assets/Music/music.txt");
-		StreamReader fq = new StreamReader("/Users/Ansh/Documents/Github/NewDawnFades/NewDawnFades/Assets/Music/freq.txt");
+		StreamReader sr = new StreamReader(pathName);
+        StreamReader fq = new StreamReader(freqPathName);
 		str = sr.ReadLine();
 		freqString = fq.ReadLine ();
 	}
