@@ -24,7 +24,7 @@ public class MovePlayer : MonoBehaviour {
 //		}
 		if(Input.GetKey (KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
 		{
-			transform.position+=new Vector3(0.0005f,0f,0f);
+			transform.position+=new Vector3(0.00045f,0f,0f);
 			//forest.GetComponent<Renderer>().material.mainTextureOffset+=new Vector2(0.001f,0f);
 			playerAnim.SetBool("WalkRight",true);
 			playerAnim.Play("WalkRight");
