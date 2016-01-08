@@ -49,6 +49,7 @@ public class JingleObject : MonoBehaviour {
 		//that the triangles from the vertex relationships
 		//are recalculated correctly
 		meshObjectsMesh.RecalculateBounds();
+			GetComponent<MeshCollider>().sharedMesh=meshObjectsMesh;
 	}
 }
 }
