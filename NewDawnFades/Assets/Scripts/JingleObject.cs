@@ -7,6 +7,9 @@ public class JingleObject : MonoBehaviour {
 	//The objects mesh
 	private Mesh meshObjectsMesh;
 	private float randLimit=0f;
+	public float vertY=0f;
+	public float vertX=0f;
+	public float vertZ=0f;
 	
 	//Initialise class
 	void Start () {
@@ -36,6 +39,9 @@ public class JingleObject : MonoBehaviour {
 				v3Vertex.x += ReadText.num * 3f* Random.value;
 				v3Vertex.y += ReadText.freqNum * 3f* Random.value;
 				v3Vertex.z += ReadText.num * 3f* Random.value;
+				vertX=v3Vertex.x;
+				vertY=v3Vertex.y;
+				vertZ=v3Vertex.z;
 				//Add the new vertex to our new array
 				v3Vertices [i] = v3Vertex;
 			}
