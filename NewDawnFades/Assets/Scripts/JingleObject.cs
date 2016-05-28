@@ -36,9 +36,9 @@ public class JingleObject : MonoBehaviour {
 				//Get the next vertex
 				Vector3 v3Vertex = v3BaseVertices [i];
 				//Make a change to each of the coordinates of this vertex
-				v3Vertex.x += ReadText.num * 3f* Random.value;
+				v3Vertex.x += ReadText.num * 2.5f* Random.value;
 				v3Vertex.y += ReadText.freqNum * 3f* Random.value;
-				v3Vertex.z += ReadText.num * 3f* Random.value;
+				v3Vertex.z += ReadText.num * 2.5f* Random.value;
 				vertX=v3Vertex.x;
 				vertY=v3Vertex.y;
 				vertZ=v3Vertex.z;

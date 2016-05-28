@@ -5,12 +5,14 @@ public class MovePlayer : MonoBehaviour {
 
 	private Animator playerAnim;
 	public GameObject dirLight;
+    private bool obj = false;
 	//public GameObject forest;
 	//public GameObject movequad;
 	// Use this for initialization
 	void Start () {
-	
-		playerAnim = GetComponent<Animator> ();
+
+        
+            playerAnim = GetComponent<Animator> ();
 	}
 	
 	// Update is called once per frame
@@ -22,13 +24,22 @@ public class MovePlayer : MonoBehaviour {
 //		{
 //			transform.position+=new Vector3(-0.01f,0f,0f);
 //		}
-		if(Input.GetKey (KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+		if(Input.GetKey (KeyCode.Space) && !ReadText.close)
 		{
-			transform.position+=new Vector3(0.00045f,0f,0f);
+			transform.position+=new Vector3(0.0004f,0f,0f);
 			//forest.GetComponent<Renderer>().material.mainTextureOffset+=new Vector2(0.001f,0f);
-			playerAnim.SetBool("WalkRight",true);
-			playerAnim.Play("WalkRight");
+			//playerAnim.SetBool("WalkRight",true);
+            
+                GetComponent<Animator>().SetBool("Walking", true);
+            
+			//playerAnim.Play("WalkRight");
 		}
+        else
+        {
+           
+                GetComponent<Animator>().SetBool("Walking", false);
+           
+        }
 //		else if(Input.GetKey (KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
 //		{
 //			transform.position+=new Vector3(0f,0.01f,0f);

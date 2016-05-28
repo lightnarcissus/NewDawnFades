@@ -3,13 +3,13 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 7,
-			"minor" : 0,
-			"revision" : 5,
+			"minor" : 2,
+			"revision" : 2,
 			"architecture" : "x86",
 			"modernui" : 1
 		}
 ,
-		"rect" : [ 34.0, 186.0, 824.0, 480.0 ],
+		"rect" : [ 42.0, 186.0, 824.0, 480.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -37,6 +37,56 @@
 		"style" : "",
 		"subpatcher_template" : "",
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-23",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 700.0, 274.5, 48.0, 22.0 ],
+					"style" : "",
+					"text" : "freq $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 674.0, 313.0, 137.0, 22.0 ],
+					"style" : "",
+					"text" : "udpsend localhost 9000"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 277.0, 258.0, 59.0, 22.0 ],
+					"style" : "",
+					"text" : "music $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-21",
+					"maxclass" : "newobj",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 251.0, 296.5, 137.0, 22.0 ],
+					"style" : "",
+					"text" : "udpsend localhost 9000"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-22",
 					"maxclass" : "toggle",
@@ -109,7 +159,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 724.0, 122.0, 50.0, 35.0 ],
+					"patching_rect" : [ 724.0, 122.0, 50.0, 36.0 ],
 					"style" : "",
 					"text" : "nice/ok 2."
 				}
@@ -135,10 +185,10 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 412.0, 240.0, 150.0, 47.0 ],
+					"patching_rect" : [ 412.0, 240.0, 150.0, 48.0 ],
 					"presentation" : 1,
 					"presentation_linecount" : 3,
-					"presentation_rect" : [ 130.0, 112.666664, 150.0, 47.0 ],
+					"presentation_rect" : [ 130.0, 112.666664, 150.0, 48.0 ],
 					"style" : "",
 					"text" : "CLICK THIS before playing!\nUNCLICK before leaving"
 				}
@@ -157,8 +207,8 @@
 						"followglobaltempo" : 0,
 						"formantcorrection" : 0,
 						"mode" : "basic",
-						"originallength" : [ 276480.0, "ticks" ],
-						"originaltempo" : 120.0,
+						"originallength" : [ 276480.03125, "ticks" ],
+						"originaltempo" : 120.000008,
 						"pitchcorrection" : 0,
 						"quality" : "basic",
 						"timestretch" : [ 0 ]
@@ -194,32 +244,6 @@
 					"presentation" : 1,
 					"presentation_rect" : [ 154.666656, 46.333328, 64.333336, 64.333336 ],
 					"style" : ""
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-15",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 524.0, 336.0, 144.0, 22.0 ],
-					"style" : "",
-					"text" : "clear, $1, cr, write freq.txt"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-17",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "bang", "int" ],
-					"patching_rect" : [ 488.0, 383.0, 70.0, 22.0 ],
-					"style" : "",
-					"text" : "text freq.txt"
 				}
 
 			}
@@ -271,8 +295,8 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 7,
-							"minor" : 0,
-							"revision" : 5,
+							"minor" : 2,
+							"revision" : 2,
 							"architecture" : "x86",
 							"modernui" : 1
 						}
@@ -583,32 +607,6 @@
 			}
 , 			{
 				"box" : 				{
-					"id" : "obj-3",
-					"maxclass" : "message",
-					"numinlets" : 2,
-					"numoutlets" : 1,
-					"outlettype" : [ "" ],
-					"patching_rect" : [ 287.0, 343.0, 155.0, 22.0 ],
-					"style" : "",
-					"text" : "clear, $1, cr, write music.txt"
-				}
-
-			}
-, 			{
-				"box" : 				{
-					"id" : "obj-1",
-					"maxclass" : "newobj",
-					"numinlets" : 1,
-					"numoutlets" : 3,
-					"outlettype" : [ "", "bang", "int" ],
-					"patching_rect" : [ 251.0, 390.0, 81.0, 22.0 ],
-					"style" : "",
-					"text" : "text music.txt"
-				}
-
-			}
-, 			{
-				"box" : 				{
 					"id" : "obj-16",
 					"local" : 1,
 					"maxclass" : "ezdac~",
@@ -730,7 +728,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-3", 0 ],
+					"destination" : [ "obj-24", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
@@ -743,15 +741,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-14", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-17", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-15", 0 ]
 				}
 
 			}
@@ -788,6 +777,24 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-22", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-25", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-23", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-21", 0 ],
+					"disabled" : 0,
+					"hidden" : 0,
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
@@ -851,15 +858,6 @@
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-29", 0 ]
-				}
-
-			}
-, 			{
-				"patchline" : 				{
-					"destination" : [ "obj-1", 0 ],
-					"disabled" : 0,
-					"hidden" : 0,
-					"source" : [ "obj-3", 0 ]
 				}
 
 			}
@@ -937,7 +935,7 @@
 			}
 , 			{
 				"patchline" : 				{
-					"destination" : [ "obj-15", 0 ],
+					"destination" : [ "obj-23", 0 ],
 					"disabled" : 0,
 					"hidden" : 0,
 					"source" : [ "obj-8", 0 ]
@@ -974,8 +972,8 @@
  ],
 		"parameters" : 		{
 			"obj-4" : [ "live.gain~[1]", "live.gain~", 0 ],
-			"obj-6::obj-35" : [ "[5]", "Level", 0 ],
-			"obj-6::obj-21::obj-6" : [ "live.tab[3]", "live.tab[1]", 0 ]
+			"obj-6::obj-21::obj-6" : [ "live.tab[3]", "live.tab[1]", 0 ],
+			"obj-6::obj-35" : [ "[5]", "Level", 0 ]
 		}
 ,
 		"dependency_cache" : [ 			{
@@ -1009,7 +1007,7 @@
 				"implicit" : 1
 			}
  ],
-		"embedsnapshot" : 0,
+		"autosave" : 0,
 		"styles" : [ 			{
 				"name" : "AudioStatus_Menu",
 				"default" : 				{
@@ -1085,8 +1083,8 @@
 , 			{
 				"name" : "newobjYellow-1",
 				"default" : 				{
-					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ],
-					"fontsize" : [ 12.059008 ]
+					"fontsize" : [ 12.059008 ],
+					"accentcolor" : [ 0.82517, 0.78181, 0.059545, 1.0 ]
 				}
 ,
 				"parentstyle" : "",

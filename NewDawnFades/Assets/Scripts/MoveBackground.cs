@@ -12,7 +12,7 @@ public class MoveBackground : MonoBehaviour {
 	void Update () {
 
 if (gameObject.name == "darkRoad") {
-			if (Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.RightArrow)) {
+			if (Input.GetKey (KeyCode.Space) && !ReadText.close) {
 				gameObject.GetComponent<Renderer> ().material.mainTextureOffset += new Vector2 (0.001f, 0f);
 			}
 		}	 else {
